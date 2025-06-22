@@ -1,0 +1,265 @@
+\documentclass[12pt]{article}
+\usepackage[margin=1in]{geometry}
+\usepackage{hyperref}
+\usepackage{enumitem}
+\usepackage{xcolor}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{amssymb}
+
+
+\title{\textbf{Research Notes: Reconstructing the Evolutionary History of Black Widow/Redback Pulsars}\\[1em]
+\large{Project Notebook and Information Repository}}
+\author{Kathryn Hart and Christopher Crow \\ \small{Pisgah Astronomical Research Institute, University, etc.}}
+\date{Start: June 22, 2025}
+
+\begin{document}
+\maketitle
+
+\section*{Purpose of This Document}
+This document serves as an ongoing repository for organizing thoughts, methods, results, references, and working notes related to the project. Content may include project outlines, evolving ideas, background reading, observational planning, analysis progress, figures, and tables.
+
+\section*{Central Research Question}
+\textbf{How can we reconstruct the evolutionary history of \underline{[System[s] X]} using radio observations from PARI and detailed binary evolution modeling, and what does this reveal about the formation mechanisms and future of black widow/redback systems?}
+
+\section*{1. Project Overview and Motivation}
+
+Black widow and redback pulsars are millisecond pulsars (MSPs) in tight binary systems with extremely low-mass (black widows) or non-degenerate (redback) companions. These systems are astrophysically rich: the pulsar's intense wind ablates or even fully destroys the companion, leading to spectacular radio eclipses and dramatic changes in orbital and spin properties. Studying these objects is crucial for understanding the end stages of binary evolution, the physics of mass transfer, the recycling process that spins up neutron stars, and the ultimate fate of binary systems in our Galaxy.
+
+\vspace{1em}
+
+Despite significant observational and theoretical progress, many questions remain about how black widow and redback systems form, evolve, and interact with their companions. Key unknowns include the physical drivers and efficiency of mass loss (ablation), the transition from accretion-powered X-ray binaries to rotation-powered MSPs, and the fate of companions—will they be fully evaporated, or survive as exotic low-mass remnants?
+
+\vspace{1em}
+
+This project aims to bridge population synthesis modeling and detailed case studies using new and archival radio observations from the PARI 26-meter telescope. The synergy between theory and observation enables us to both reconstruct the unique evolutionary histories of individual spider pulsars and evaluate how well state-of-the-art models predict the properties and demographics of the observed population.
+
+\vspace{1em}
+
+\textbf{Specific research foci for this project may include:}
+\begin{itemize}
+    \item \textbf{Reconstructing Progenitor Evolution:} For a selected spider system, use radio data and binary evolution modeling (via COSMIC and METISSE) to identify its most probable evolutionary pathway, tracing the initial binary through mass transfer phases, ablation, and current observed configuration.
+    \item \textbf{Testing Population Synthesis Predictions:} Compare the predicted distributions of orbital period, companion mass, and radio luminosity for black widow and redback systems to the subset accessible by PARI observations. Assess which systems are “missing” and what this implies about selection effects, ablation efficiency, or survey biases.
+    \item \textbf{Exploring Ablation and Eclipses:} Analyze radio eclipse characteristics and pulse timing to probe the geometry and density of ablated winds. Use this to constrain mass loss rates and the physical mechanisms of companion evaporation.
+    \item \textbf{Quantifying Model Sensitivity:} Investigate how assumptions about angular momentum loss, magnetic braking, and mass transfer efficiency in population synthesis affect the likelihood of producing observed systems. Use observational constraints to refine model parameters.
+    \item \textbf{Connecting to Broader Astrophysical Questions:} Examine implications for neutron star mass distributions, binary survivability, and the ultimate end states of compact binaries. How do black widows/redbacks fit into the evolutionary links between X-ray binaries, MSPs, and isolated pulsars?
+\end{itemize}
+
+\vspace{1em}
+
+By combining the unique capabilities of the PARI 26m telescope with advanced computational tools, this project will shed light on the physics governing some of the most extreme binary systems in the Galaxy, and help to clarify the evolutionary links between different classes of compact objects.
+
+\section*{2. Target System Candidates and Scientific Motivation}
+
+\vspace{0.5em}
+\noindent \textbf{Each of these spider pulsars offers a unique laboratory for studying binary evolution, pulsar recycling, and the interplay between mass transfer and ablation. The choice of target will depend on visibility from PARI, scientific goals, and the nature of available multiwavelength data.}
+
+\vspace{1em}
+\begin{itemize}
+    \item \textbf{PSR~B1957+20} (Black Widow):\\
+    $P_{spin}=1.6$ ms, $P_{orb}=9.2$ h, $M_{comp}\approx0.035\,M_\odot$\\
+    
+    \textit{Why scientifically interesting:}\\
+    The original ``black widow'' pulsar, B1957+20 is the archetype for this class. Its eclipses, ablation wind, and high-precision timing have provided critical insights into how pulsars can destroy their companions. It has a relatively massive neutron star ($\gtrsim 2\,M_\odot$), making it crucial for constraining neutron star equation of state and binary mass transfer efficiency. Multiwavelength campaigns (radio, optical, X-ray) have mapped the system in great detail, but open questions remain about the evolutionary history and ongoing mass loss.\\
+    
+    \textit{References:}
+    \begin{itemize}
+        \item Fruchter, A. S., Stinebring, D. R., \& Taylor, J. H. (1988), \textit{Nature}, 333, 237. \href{https://www.nature.com/articles/333237a0}{(Discovery Paper)}
+        \item van Kerkwijk, M. H., et al. (2011), \textit{ApJ}, 728, 95. \href{https://iopscience.iop.org/article/10.1088/0004-637X/728/2/95}{(NS mass and optical modeling)}
+        \item Roberts, M. S. E. (2013), \href{https://arxiv.org/abs/1210.6903}{(Review of spiders)}
+    \end{itemize}
+    \vspace{0.5em}
+    
+    \item \textbf{PSR~J1023+0038} (Transitional Redback):\\
+    $P_{spin}=1.7$ ms, $P_{orb}=4.8$ h, $M_{comp}\approx0.2$--$0.4\,M_\odot$\\
+    
+    \textit{Why scientifically interesting:}\\
+    J1023+0038 is the first known ``transitional'' millisecond pulsar, directly observed to switch between a radio pulsar and an accreting X-ray binary state. This system provides the missing evolutionary link between low-mass X-ray binaries and recycled radio pulsars. Its transitions, complex variability, and optical emission lines have made it a testbed for accretion physics, disk-magnetosphere interactions, and binary evolution theory.\\
+    
+    \textit{References:}
+    \begin{itemize}
+        \item Archibald, A. M., et al. (2009), \textit{Science}, 324, 1411. \href{https://www.science.org/doi/10.1126/science.1172740}{(Discovery of transition)}
+        \item Takata, J., et al. (2014), \textit{ApJ}, 785, 131. \href{https://iopscience.iop.org/article/10.1088/0004-637X/785/2/131}{(Multiwavelength study)}
+        \item Papitto, A., et al. (2013), \textit{Nature}, 501, 517. \href{https://www.nature.com/articles/nature12470}{(X-ray transitions)}
+    \end{itemize}
+    \vspace{0.5em}
+    
+    \item \textbf{PSR~J0952--0607}:\\
+    $P_{spin}=1.4$ ms, $P_{orb}=6.4$ h, $M_{comp}\approx0.02\,M_\odot$\\
+    
+    \textit{Why scientifically interesting:}\\
+    The fastest-spinning MSP in the Galactic field (1.41 ms), J0952--0607 hosts an extremely massive neutron star ($M_{NS} \gtrsim 2\,M_\odot$) and a very low-mass companion, offering a stringent test of accretion efficiency and pulsar spin-up physics. The system is faint in radio but bright in gamma-rays, highlighting the diversity of emission in spider binaries.\\
+    
+    \textit{References:}
+    \begin{itemize}
+        \item Bassa, C. G., et al. (2017), \textit{ApJ}, 846, 115. \href{https://iopscience.iop.org/article/10.3847/1538-4357/aa859c}{(Discovery paper)}
+        \item Romani, R. W., et al. (2022), \textit{ApJ}, 934, 56. \href{https://iopscience.iop.org/article/10.3847/1538-4357/ac71e1}{(NS mass constraints)}
+    \end{itemize}
+    \vspace{0.5em}
+    
+    \item \textbf{PSR~J1311--3430}:\\
+    $P_{spin}=2.5$ ms, $P_{orb}=1.56$ h, $M_{comp}\approx0.008\,M_\odot$\\
+    
+    \textit{Why scientifically interesting:}\\
+    J1311--3430 is the shortest orbital period black widow, discovered first in gamma-rays. Its companion is extremely low-mass and helium-dominated, with a dramatic radio eclipse fraction and strong flares. It pushes the limits of binary interaction, ablation, and neutron star mass measurements.\\
+    
+    \textit{References:}
+    \begin{itemize}
+        \item Pletsch, H. J., et al. (2012), \textit{Science}, 338, 1314. \href{https://www.science.org/doi/10.1126/science.1229054}{(Discovery paper)}
+        \item Romani, R. W., et al. (2015), \textit{ApJ}, 809, L10. \href{https://iopscience.iop.org/article/10.1088/2041-8205/809/1/L10}{(Optical and mass measurements)}
+    \end{itemize}
+    \vspace{0.5em}
+    
+    \item \textbf{PSR~J2215+5135} (Redback):\\ $P_{orb}=4.1$ h, $M_{comp}\approx0.2\,M_\odot$\\
+    
+    \textit{Why scientifically interesting:}\\
+    J2215+5135 is a classic redback system with a well-studied, non-degenerate companion. Its optical light curves and radial velocities provide some of the best mass constraints for both the neutron star and the companion. The system is bright in both radio and gamma-rays, and offers insight into the physics of ablation and the redback--black widow connection.\\
+    
+    \textit{References:}
+    \begin{itemize}
+        \item Schroeder, J., \& Halpern, J. P. (2014), \textit{ApJ}, 793, 78. \href{https://iopscience.iop.org/article/10.1088/0004-637X/793/2/78}{(Optical and mass study)}
+        \item Linares, M. (2018), \textit{MNRAS}, 476, 2173. \href{https://academic.oup.com/mnras/article/476/2/2173/4844415}{(Mass and multiwavelength study)}
+    \end{itemize}
+\end{itemize}
+
+
+\section*{3. Observational Planning (PARI 26m)}
+\begin{itemize}
+    \item Telescope: PARI 26-meter
+    \item Frequency: L-band (1.4 GHz)
+    \item Observables: Pulse profiles, eclipse timing and duration, flux density, dispersion measure, timing residuals
+    \item Observation status: \textit{(notes, schedule, results here as project progresses)}
+\end{itemize}
+
+\section*{4. Evolutionary Modeling Plan}
+
+This project will reconstruct the evolutionary history of the target system by combining binary population synthesis with detailed stellar evolution modeling, primarily using the open-source frameworks \textbf{COSMIC} and \textbf{METISSE}.
+
+\subsection*{4.1. Overview of Tools}
+\begin{itemize}
+    \item \textbf{COSMIC} (\href{https://cosmic-popsynth.github.io/}{cosmic-popsynth.github.io}) is a flexible Python package for rapid population synthesis of binary stars, built on the BSE algorithm but with modern interfaces and support for external stellar tracks via METISSE.
+    \item \textbf{METISSE} (\href{https://github.com/TeamCOMPAS/metisse}{github.com/TeamCOMPAS/metisse}) allows for fast and accurate interpolation of detailed stellar evolution models, producing more realistic evolution for donor stars and accretors in binaries.
+\end{itemize}
+
+\subsection*{4.2. Input Parameter Exploration}
+\begin{itemize}
+    \item Sample a grid or Monte Carlo distribution of \textbf{initial parameters}:
+        \begin{itemize}
+            \item Primary and secondary masses
+            \item Initial orbital separation (or period)
+            \item Metallicity ($Z$)
+            \item Initial mass ratio and orbital eccentricity
+        \end{itemize}
+    \item Apply physical prescriptions for:
+        \begin{itemize}
+            \item Common envelope evolution (e.g., $\alpha_{\rm CE}$ efficiency)
+            \item Mass transfer stability criteria
+            \item Angular momentum loss (magnetic braking, gravitational wave radiation)
+            \item Effects of pulsar wind ablation and irradiation feedback
+        \end{itemize}
+    \item Leverage \textbf{METISSE} tracks within COSMIC to improve donor/accretor evolution, especially for low-mass helium or stripped companions.
+\end{itemize}
+
+\subsection*{4.3. Matching Observed System Parameters}
+\begin{itemize}
+    \item For each evolutionary track, extract the final parameters:
+        \begin{itemize}
+            \item Neutron star mass ($M_{NS}$)
+            \item Companion mass ($M_{comp}$)
+            \item Current orbital period ($P_{orb}$)
+            \item Spin period ($P_{spin}$) if possible
+        \end{itemize}
+    \item Compare these to the \textbf{observed values} from radio and optical data.
+    \item Identify “successful” tracks that reproduce the observed configuration of the target system.
+\end{itemize}
+
+\subsection*{4.4. Sensitivity and Uncertainty Analysis}
+\begin{itemize}
+    \item Vary key physical assumptions systematically:
+        \begin{itemize}
+            \item Ablation rate of the companion by the pulsar wind
+            \item Mass transfer efficiency (conservative vs. non-conservative)
+            \item Magnetic braking and angular momentum loss prescriptions
+            \item Common envelope efficiency
+        \end{itemize}
+    \item Assess how these affect the likelihood of forming a system like the target.
+    \item Quantify model uncertainty and identify which parameters are most critical.
+\end{itemize}
+
+\subsection*{4.5. Integration with Observational Constraints}
+\begin{itemize}
+    \item Incorporate additional observational information:
+        \begin{itemize}
+            \item Eclipse duration and occurrence
+            \item Companion effective temperature and luminosity (if available)
+            \item Constraints from optical/IR/X-ray data, such as evidence for residual accretion or irradiation
+        \end{itemize}
+    \item Refine or rule out evolutionary tracks that are inconsistent with all available data.
+\end{itemize}
+
+\subsection*{4.6. Workflow and Documentation}
+\begin{itemize}
+    \item Maintain reproducible scripts and configuration files for all runs (version control recommended).
+    \item Log model versions, input grids, and output catalogues.
+    \item Store and annotate plots comparing simulated and observed system properties.
+    \item Track key findings and any issues in an ongoing modeling log.
+\end{itemize}
+
+\textit{Ongoing modeling notes, results, and diagnostic figures should be added below as the project develops.}
+
+\section*{5. Data and Analysis Log}
+\textit{Keep a dated log of analysis steps, fits, preliminary results, issues, figures, and thoughts.}
+
+\vspace{1em}
+\textbf{Example:}
+\begin{itemize}
+    \item [2025-06-22] Downloaded recent timing ephemerides for PSR~B1957+20; ran first population synthesis test grid.
+    \item [2025-06-29] Completed first PARI observation; detected eclipses near expected orbital phase.
+    \item [2025-07-10] Compared MESA evolutionary tracks to observed companion mass.
+\end{itemize}
+
+\section*{6. Background Reading and References}
+
+\subsection*{A. General Reviews and Spider Pulsars}
+\begin{itemize}
+    \item Roberts, M.S.E. (2013), ``Surrounded by spiders! New black widows and redbacks in the Galactic field,'' \textit{IAU Symp. 291}, \href{https://arxiv.org/abs/1210.6903}{arXiv:1210.6903}
+    \item Papitto, A., \& de Martino, D. (2020), ``Transitional millisecond pulsars and their environment,'' \textit{Universe}, 6(3), 46. \href{https://www.mdpi.com/2218-1997/6/3/46}{doi:10.3390/universe6030046}
+    \item Breton, R. P. (2016), ``Black Widow and Redback Pulsars: Observations,'' \textit{Astrophys. Space Sci. Libr.}, 419, 185. \href{https://arxiv.org/abs/1510.05940}{arXiv:1510.05940}
+\end{itemize}
+
+\subsection*{B. Population Synthesis and Evolution Theory}
+\begin{itemize}
+    \item Chen, H.-L., Chen, X., Tauris, T.M., Han, Z. (2013), ``Population synthesis of black widows and redbacks,'' \textit{ApJ}, \href{https://arxiv.org/abs/1307.1722}{arXiv:1307.1722}
+    \item Smedley, S. L., et al. (2015), ``Formation of black widow and redback pulsars in the Galactic field,'' \textit{MNRAS}, 446, 2540. \href{https://academic.oup.com/mnras/article/446/3/2540/1056016}{doi:10.1093/mnras/stu2276}
+    \item Benvenuto, O. G., et al. (2014), ``Formation of Black Widow Pulsars: The Influence of Irradiation Feedback,'' \textit{ApJ}, 786, L7. \href{https://iopscience.iop.org/article/10.1088/2041-8205/786/1/L7}{doi:10.1088/2041-8205/786/1/L7}
+    \item Tauris, T.M. \& van den Heuvel, E.P.J. (2006), \textit{Formation and Evolution of Compact Stellar X-ray Sources}, Cambridge University Press. \href{https://ui.adsabs.harvard.edu/abs/2006csxs.book..623T/abstract}{ADS}
+\end{itemize}
+
+\subsection*{C. Observational Studies and Multiwavelength Surveys}
+\begin{itemize}
+    \item Ray, P.S., et al. (2012), ``Radio Detection of the Fermi LAT Blind Search Millisecond Pulsars,'' \textit{arXiv}, \href{https://arxiv.org/abs/1205.3089}{arXiv:1205.3089}
+    \item Strader, J., et al. (2019), ``Radio Eclipses and Variability in Black Widow and Redback Pulsars,'' \textit{ApJ}, 872, 42. \href{https://iopscience.iop.org/article/10.3847/1538-4357/aafadf}{doi:10.3847/1538-4357/aafadf}
+    \item Linares, M. (2018), ``Spider Pulsar Masses: A Review,'' \textit{MNRAS}, 476, 2173. \href{https://academic.oup.com/mnras/article/476/2/2173/4844415}{doi:10.1093/mnras/sty372}
+\end{itemize}
+
+\subsection*{D. Key System Papers}
+\textit{(See also Section 2 for system-specific discovery and analysis papers)}
+\begin{itemize}
+    \item Fruchter, A.S., Stinebring, D.R., Taylor, J.H. (1988), ``A millisecond pulsar in an eclipsing binary,'' \textit{Nature}, 333, 237. \href{https://www.nature.com/articles/333237a0}{B1957+20 Discovery}
+    \item Archibald, A. M., et al. (2009), ``A Radio Pulsar/X-ray Binary Link,'' \textit{Science}, 324, 1411. \href{https://www.science.org/doi/10.1126/science.1172740}{J1023+0038}
+    \item Pletsch, H. J., et al. (2012), ``Binary Millisecond Pulsar Discovery via Gamma Rays,'' \textit{Science}, 338, 1314. \href{https://www.science.org/doi/10.1126/science.1229054}{J1311--3430}
+\end{itemize}
+
+\subsection*{E. Methods, Catalogs, and Tools}
+\begin{itemize}
+    \item ATNF Pulsar Catalogue: \href{https://www.atnf.csiro.au/research/pulsar/psrcat/}{https://www.atnf.csiro.au/research/pulsar/psrcat/}
+    \item COSMIC: \href{https://cosmic-popsynth.github.io/}{https://cosmic-popsynth.github.io/}
+    \item MESA: \href{http://mesa.sourceforge.net/}{http://mesa.sourceforge.net/}
+    \item PARI: \href{https://www.pari.edu/}{https://www.pari.edu/}
+\end{itemize}
+
+
+\vspace{2em}
+\noindent\textit{This document is a living research notebook and should be updated as the project progresses. Add sections, tables, code snippets, figures, or thoughts as needed.}
+
+\end{document}
